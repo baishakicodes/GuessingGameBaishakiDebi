@@ -6,13 +6,13 @@ public class Game {
 
     public static void main(String[] args) {
 	// write your code here
-        Scanner num = new Scanner (System.in);
-        System.out.print("Guess a number:");
-        int guess = num.nextInt();
-        while(guess != 5){
-            System.out.print("Guess again:");
-            guess = num.nextInt();
+        int AINum = (int)(Math.random()*100+1);
+        int compGuess = (int)(Math.random()*100+1);
+        Scanner hint = new Scanner(System.in);
+        String userHint = hint.nextLine();
+        while(AINum != compGuess){
+            
         }
-        System.out.println("You guessed correctly!");
+
     }
 }
