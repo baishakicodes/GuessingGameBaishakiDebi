@@ -17,12 +17,8 @@ public class CompGenGame {
             else {
                 System.out.println("That number is too low!");
                 guess = num.nextInt();
-
             }
-
         }
         System.out.println("You guessed correctly!");
-
-
     }
 }
