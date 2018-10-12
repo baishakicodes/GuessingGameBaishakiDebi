@@ -9,7 +9,7 @@ public class Game {
     public static void main(String[] args) {
         // write your code here
         Scanner hint = new Scanner(System.in);
-        System.out.println("Pick a secret number from 1 to 100 and I'll try to guess it!");
+        System.out.println("Pick a secret number between 1 to 100 and I'll try to guess it!");
         int myNum = hint.nextInt();
         int max = 100;
         int min = 1;
