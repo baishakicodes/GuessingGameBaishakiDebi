@@ -15,28 +15,32 @@ public class Game {
         int min = 1;
         int compGuess = 50;
         int tries = 0;
-        System.out.println("Is your number "+compGuess+"?");
-        while (myNum!=compGuess) {
+        boolean correct = false;
+        System.out.println("Is your number " + compGuess + "?");
+        while (!correct) {
             String userHint = hint.nextLine();
             if (userHint.equals("Too high")) {
                 max = compGuess;
-                compGuess = (min+max)/2;
-                System.out.println("Is your number "+compGuess);
+                compGuess = (min + max) / 2;
+                System.out.println("Is your number " + compGuess + "?");
                 tries++;
-            } else {
-                if (userHint.equals("Too low")) {
-                    min = compGuess;
-                    compGuess = (min + max) / 2;
-                    System.out.println("Is your number "+compGuess);
-                    tries++;
-
-                }
+            }
+            if (userHint.equals("Too low")) {
+                min = compGuess;
+                compGuess = (min + max) / 2;
+                System.out.println("Is your number " + compGuess + "?");
+                tries++;
+            }
+            if(userHint.equals("Correct")){
+                tries++;
+                System.out.println("Yay, I got your number of "+compGuess+" in "+tries +" guesses!");
+                correct = true;
             }
         }
-        System.out.println("Your number is "+compGuess+"!");
-        System.out.println("And I took "+tries+" guesses to get your number!");
     }
 }
+
+
 
 
 
